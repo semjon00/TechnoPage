@@ -70,6 +70,8 @@
 				
 				planet.rotation.set(0, toRad((millis() / 150) % 360), 0);
 				
+				scene.children[2].children[0].material.uniforms.time.value = Math.sin(millis() / 2000) * 0.2;
+				
 				renderer.render(scene, camera);
 			}
 			
@@ -94,6 +96,8 @@
 				var color2 = new THREE.Color(0xE0B455);
 				var color3 = new THREE.Color(0x1C6D35);
 				
+				var time = Math.sin(millis() / 50);
+				
 				var material = new THREE.ShaderMaterial({
 					uniforms: {
 						lightPosition: {
@@ -107,6 +111,9 @@
 						},
 						colorAtmosphere: {
 							value: colorAtmosphere
+						},
+						time: {
+							value: time
 						},
 					},
 					vertexShader: planetVertexShader,
@@ -135,6 +142,8 @@
 		</script>
 		
 		<script id="fragmentShader" type="x-shader/x-fragment">
+			uniform float time;
+			
 			uniform vec3 colors[3];
 			uniform vec3 colorWater;
 			uniform vec3 colorAtmosphere;
@@ -182,7 +191,10 @@
 				f = (f + a) / (2.0 * a);
 
 				vec3 color = colors[1];
-				if (f < 0.3)
+				
+				float water_tresh = 0.35 + time;
+				
+				if (f < water_tresh)
 					color = (0.4+f/2.0) * colorWater;
 				else if (f < 0.55)
 					color = colors[0];
@@ -209,7 +221,7 @@
 				
 				vec3 curColor;
 				curColor += color * max(0.3, dot(n, l));
-				if (f < 0.3)
+				if (f < water_tresh)
 					curColor += 0.5 * pow(max(0.0, dot(v, r)), shininess);
 					
 				vec3 colorAtm = max(0.0, min(0.3, 0.7 - pow(max(0.0, dot(n, v)), 0.6))) * colorAtmosphere;

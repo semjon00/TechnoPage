@@ -48,7 +48,6 @@ body {
 	text-shadow: 2px 0.5px gray;
 	font-family: "Comic Sans MS", cursive, sans-serif;
 	text-align: justify;
-	text-indent: 15px;
 }
 
 .castrated {
@@ -70,10 +69,13 @@ li {
 
 li a {
 	display: block;
-	color: white;
+	color: #F7A701;
 	text-align: center;
-	padding: 15px 32px;
+	padding: 12px 32px;
 	text-decoration: none;
+	font-size: 18px;
+	letter-spacing: 2px;
+	text-shadow: 1px 0px;
 }
 
 .bestbutton {
@@ -81,7 +83,7 @@ li a {
 	background-color: #23842d;
 	font-size: 24px;
 	display: flex;
-	color: #e00;
+	color: #F7A701;
 }
 
 li a:hover:not(.bestbutton) {
