@@ -3,8 +3,20 @@ body {
 	padding: 0px;
 }
 
+.bgpicture {
+	z-index: -1;
+	height: 100%;
+	width: 100%;
+	background-image: url("png/space.jpg");
+	background-repeat:no-repeat;
+	background-size: 100%;
+	background-position: center;
+	position: fixed;
+	background-color: #000;
+}
+
 .padded {
-	padding: 30px 10px;
+	padding: 30px 30px;
 }
 
 #PizzaPlanet {
@@ -28,6 +40,19 @@ body {
 	font-family: "Blanka";
 	color: #181bdf;
 	letter-spacing: 0.2em;
+}
+
+.cringetext {
+	letter-spacing: 0.5px;
+	color: #fff;
+	text-shadow: 2px 0.5px gray;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	text-align: justify;
+	text-indent: 15px;
+}
+
+.castrated {
+	width: 75%;
 }
 
 /* https://www.w3schools.com/css/css_navbar.asp edited */
@@ -56,6 +81,7 @@ li a {
 	background-color: #23842d;
 	font-size: 24px;
 	display: flex;
+	color: #e00;
 }
 
 li a:hover:not(.bestbutton) {
