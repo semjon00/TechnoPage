@@ -15,6 +15,28 @@ body {
 	background-color: #000;
 }
 
+.giantpizza {
+	z-index: -1;
+	height: 130%;
+	width: 100%;
+	background-image: url("png/pizza1.png");
+	background-repeat:no-repeat;
+	background-size: 30%;
+	position: fixed;
+	bottom: -70%;
+	right: 0px;
+}
+
+.bleft {
+	background-position: left;
+}
+.bcenter {
+	background-position: center;
+}
+.bright {
+	background-position: right;
+}
+
 .padded {
 	padding: 30px 30px;
 }
@@ -48,6 +70,18 @@ body {
 	text-shadow: 2px 0.5px gray;
 	font-family: "Comic Sans MS", cursive, sans-serif;
 	text-align: justify;
+}
+
+@font-face {
+	font-family: "Russian";
+	src: url("Kremlin-Grand-Duke.ttf");
+}
+
+.feedback {
+	font-family: "Russian";
+	color: #F7A701;
+	letter-spacing: 0.4em;
+	font-size: 20px;
 }
 
 .castrated {
