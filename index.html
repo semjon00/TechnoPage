@@ -4,12 +4,14 @@
 		<meta charset="utf-8"/>
 		<title>BEST PIZZA</title>
 		
+		<link rel="stylesheet" type="text/css" href="style.css">
+		
 		<script type="text/javascript" src="three.r108.js"></script>
 		<script type="text/javascript">
 		
 			// I took this task from Computer Graphics - Basic II - Task 4.1 - Procedural Generation
 		
-			var width = 750; 
+			var width = 650; 
 			var height = 500;
 
 			var renderer, scene, camera;
@@ -27,7 +29,7 @@
 			}
 		
 			function onLoad() { 
-				var canvasContainer = document.getElementById('myCanvasContainer'); 
+				var canvasContainer = document.getElementById('PizzaPlanet');
 				
 				planetVertexShader = document.getElementById('vertexShader').textContent;
 				planetFragmentShader = document.getElementById('fragmentShader').textContent;
@@ -39,11 +41,17 @@
 				scene = new THREE.Scene();
 				
 				camera = new THREE.PerspectiveCamera(80, width / height, 1, 30);
-				camera.position.z = 15;
+				camera.position.z = 12;
 				camera.position.y = 0;
 				camera.up = new THREE.Vector3(0,1,0);
 				camera.lookAt(new THREE.Vector3(0,0,0));
 				scene.add(camera);
+				
+				var pgeometry = new THREE.PlaneGeometry(100, 100);
+				var pmaterial = new THREE.MeshBasicMaterial( {color: 0x392C23, side: THREE.DoubleSide} );
+				var plane = new THREE.Mesh( pgeometry, pmaterial );
+				plane.position.set(0.0,0.0,-10.0);
+				scene.add( plane );
 				
 				lightPosition = new THREE.Vector3(50, 40, 20);
 				planet = addPlanet();
@@ -54,13 +62,13 @@
 			function draw() {
 				requestAnimationFrame(draw);
 				
-				var k = 0.9 * Math.min(window.innerWidth / 1.25, window.innerHeight);
+				var k = 0.5 * Math.min(window.innerWidth / 1.25, window.innerHeight);
 				width = k * 1.25; 
 				height = k;
 				
 				renderer.setSize(width, height);
 				
-				planet.rotation.set(0, toRad((millis() / 50) % 360), 0);
+				planet.rotation.set(0, toRad((millis() / 150) % 360), 0);
 				
 				renderer.render(scene, camera);
 			}
@@ -80,11 +88,11 @@
 			
 				var geometry = new THREE.SphereBufferGeometry(1, 30, 30);
 
-				var colorWater = new THREE.Color(0x00aeef);
+				var colorWater = new THREE.Color(0xC44833);
 				var colorAtmosphere = new THREE.Color(0x66d5ed);
-				var color1 = new THREE.Color(0x197b30);
-				var color2 = new THREE.Color(0x005826);
-				var color3 = new THREE.Color(0x4e3f32);
+				var color1 = new THREE.Color(0xF0D993);
+				var color2 = new THREE.Color(0xE0B455);
+				var color3 = new THREE.Color(0x1C6D35);
 				
 				var material = new THREE.ShaderMaterial({
 					uniforms: {
@@ -174,20 +182,20 @@
 				f = (f + a) / (2.0 * a);
 
 				vec3 color = colors[1];
-				if (f < 0.5)
+				if (f < 0.3)
 					color = (0.4+f/2.0) * colorWater;
 				else if (f < 0.55)
 					color = colors[0];
 				else if (f < 0.8)
 				{
 					float k = (f - 0.55) / (0.8 - 0.55);
-					k = pow(k, 0.9);
+					k = pow(abs(k), 0.9);
 					color = (1.0 - k) * colors[0] + k * colors[1];
 				}
 				else
 				{
 					float k = (f - 0.8) / (1.0 - 0.8);
-					k = pow(k, 0.4);
+					k = pow(abs(k), 0.4);
 					color = (1.0 - k) * colors[1] + k * colors[2];
 				}
 				
@@ -200,11 +208,11 @@
 				float shininess = 15.0;
 				
 				vec3 curColor;
-				curColor += color * max(0.0, dot(n, l));
-				if (f < 0.5)
+				curColor += color * max(0.3, dot(n, l));
+				if (f < 0.3)
 					curColor += 0.5 * pow(max(0.0, dot(v, r)), shininess);
 					
-				vec3 colorAtm = max(0.0, min(0.3, 0.7 - pow(dot(n, v), 0.6))) * colorAtmosphere;
+				vec3 colorAtm = max(0.0, min(0.3, 0.7 - pow(max(0.0, dot(n, v)), 0.6))) * colorAtmosphere;
 				vec3 curColorAtm = colorAtm * max(0.0, dot(n, l));
 				
 				gl_FragColor = vec4(curColor + curColorAtm, 1.0);
@@ -212,11 +220,19 @@
 		</script>
 	</head>
 	<body onload="onLoad()">
-		<h1>The best pizza in the whole galaxy!</h1>
-		<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rhoncus facilisis tincidunt. Praesent feugiat metus ac est malesuada ultrices. Nunc condimentum, justo in varius dictum, eros nulla dignissim metus, vitae faucibus erat ligula nec est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra, neque sit amet euismod lobortis, purus ex rhoncus dui, et volutpat lacus sem eget dolor. Proin turpis neque, eleifend at lacus eu, volutpat posuere leo. Donec feugiat et erat eget luctus. Sed lobortis ipsum nec ipsum dictum, vel facilisis ipsum lobortis. Pellentesque semper euismod pharetra. Ut luctus tincidunt libero vitae faucibus. Quisque hendrerit neque quis scelerisque accumsan. Morbi tempor laoreet sem, vitae egestas enim. Integer vel semper libero. Praesent fringilla nunc et sapien convallis ultrices.</p>
-		<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut vestibulum aliquam leo, id scelerisque erat viverra non. Maecenas commodo mi libero, sit amet accumsan diam eleifend non. Nulla nisi nunc, fermentum at dui vel, faucibus sollicitudin augue. Phasellus ligula lorem, dignissim in enim ut, finibus scelerisque est. Pellentesque et nisl ut ex imperdiet semper. Nulla at rutrum dui. Fusce eu ornare urna, non facilisis arcu. Nulla eros enim, blandit a ultrices finibus, molestie eu est. </p>
+		<li><a class="sexytext bestbutton" href="#home"><img src="png/logo.png" alt="MEGA LOGO" width="72"/>BEST<br/>PIZZA</a></li>
+		<ul>
+			<li><a href="#news">Order</a></li>
+			<li><a href="#contact">Please help</a></li>
+			<li><a href="#about">About us</a></li>
+		</ul>
+
+		<div class="front padded">
+			<h1 class="sexytext">The best pizza in the whole galaxy!</h1>
+			<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rhoncus facilisis tincidunt. Praesent feugiat metus ac est malesuada ultrices. Nunc condimentum, justo in varius dictum, eros nulla dignissim metus, vitae faucibus erat ligula nec est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra, neque sit amet euismod lobortis, purus ex rhoncus dui, et volutpat lacus sem eget dolor. Proin turpis neque, eleifend at lacus eu, volutpat posuere leo. Donec feugiat et erat eget luctus. Sed lobortis ipsum nec ipsum dictum, vel facilisis ipsum lobortis. Pellentesque semper euismod pharetra. Ut luctus tincidunt libero vitae faucibus. Quisque hendrerit neque quis scelerisque accumsan. Morbi tempor laoreet sem, vitae egestas enim. Integer vel semper libero. Praesent fringilla nunc et sapien convallis ultrices.</p>
+			<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut vestibulum aliquam leo, id scelerisque erat viverra non. Maecenas commodo mi libero, sit amet accumsan diam eleifend non. Nulla nisi nunc, fermentum at dui vel, faucibus sollicitudin augue. Phasellus ligula lorem, dignissim in enim ut, finibus scelerisque est. Pellentesque et nisl ut ex imperdiet semper. Nulla at rutrum dui. Fusce eu ornare urna, non facilisis arcu. Nulla eros enim, blandit a ultrices finibus, molestie eu est. </p>
+		</div>
 			
-		<div id="myCanvasContainer"></div>
+		<div id="PizzaPlanet"></div>
 	</body>
 </html>
-	

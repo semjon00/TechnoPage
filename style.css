@@ -1,0 +1,63 @@
+body {
+	margin: 0px;
+	padding: 0px;
+}
+
+.padded {
+	padding: 30px 10px;
+}
+
+#PizzaPlanet {
+	position: fixed;
+	right: 10px;
+    display: block;
+    z-index: 3;
+}
+
+.front {
+	position: fixed;
+    z-index: 4;
+}
+
+@font-face {
+	font-family: "Blanka";
+	src: url("Blanka-Regular.otf");
+}
+
+.sexytext {
+	font-family: "Blanka";
+	color: #181bdf;
+	letter-spacing: 0.2em;
+}
+
+/* https://www.w3schools.com/css/css_navbar.asp edited */
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+}
+
+li {
+	float: left;
+}
+
+li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 15px 32px;
+	text-decoration: none;
+}
+
+.bestbutton {
+	padding: 5px 15px;
+	background-color: #4CAF50;
+	font-size: 24px;
+	display: flex;
+}
+
+li a:hover:not(.bestbutton) {
+	background-color: #111;
+}
