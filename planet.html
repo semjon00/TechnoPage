@@ -31,7 +31,7 @@
 				planetVertexShader = document.getElementById('vertexShader').textContent;
 				planetFragmentShader = document.getElementById('fragmentShader').textContent;
 				
-				renderer = new THREE.WebGLRenderer(); 
+				renderer = new THREE.WebGLRenderer({alpha: true}); 
 				renderer.setSize(width, height);
 				canvasContainer.appendChild(renderer.domElement);
 				
@@ -43,12 +43,6 @@
 				camera.up = new THREE.Vector3(0,1,0);
 				camera.lookAt(new THREE.Vector3(0,0,0));
 				scene.add(camera);
-				
-				var pgeometry = new THREE.PlaneGeometry(100, 100);
-				var pmaterial = new THREE.MeshBasicMaterial( {color: 0x000405, side: THREE.DoubleSide} );
-				var plane = new THREE.Mesh( pgeometry, pmaterial );
-				plane.position.set(0.0,0.0,-10.0);
-				scene.add( plane );
 				
 				lightPosition = new THREE.Vector3(50, 40, 20);
 				planet = addPlanet();
@@ -67,8 +61,9 @@
 				
 				planet.rotation.set(0, toRad((millis() / 150) % 360), 0);
 				
-				scene.children[2].children[0].material.uniforms.time.value = Math.sin(millis() / 2000) * 0.2;
+				scene.children[1].children[0].material.uniforms.time.value = Math.sin(millis() / 2000) * 0.2;
 				
+				renderer.setClearColor(0x00000, 0);
 				renderer.render(scene, camera);
 			}
 			
