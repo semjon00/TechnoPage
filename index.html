@@ -8,8 +8,9 @@
 		<link rel="stylesheet" type="text/css" href="css/index.css">
 		
 		<script src="three.r108.js"></script>
-		<script>
 		
+		<script src="three.r108.js"></script>
+		<script>
 			// I took this task from Computer Graphics - Basic II - Task 4.1 - Procedural Generation
 		
 			var width = 500; 
@@ -126,12 +127,12 @@
 			}
 			
 		</script>
-
+		
 		<script id="vertexShader" type="x-shader/x-vertex">
 			varying vec3 interpolatedLocalPosition; //We interpolate the local position of fragment
 			varying vec3 interpolatedPosition;
 			varying vec3 interpolatedNormal;
-			
+
 			void main() {
 				interpolatedLocalPosition = position;
 				
@@ -140,7 +141,7 @@
 				interpolatedPosition = (modelViewMatrix * vec4(position, 1.0)).xyz;
 				interpolatedNormal = normalize(normalMatrix * normal);
 			}
-		</script>
+		</script> 
 		
 		<script id="fragmentShader" type="x-shader/x-fragment">
 			uniform float time;
@@ -247,6 +248,7 @@
 		</ul>
 
 		<!-- UNIQUE CONTENT -->
+		
 		<div id="PizzaPlanet"></div>
 		<div class="padded">
 			<h1 class="sexytext">The best pizza in the whole galaxy!<br/>Try before it is too late!</h1>
@@ -270,9 +272,6 @@
 					<img src="png/alien3.png" alt="MEGA LOGO" height="96" width="72"/>
 					<div class="feedbacktext">Way better, than in Nus'teeth'org. You will be zuprized.</div>
 				</div>
-
-				
-				
 			</div>
 		</div>
 	</body>
