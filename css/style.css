@@ -11,7 +11,7 @@ body {
 	z-index: -1;
 	height: 100%;
 	width: 100%;
-	background-image: url("../png/space.jpg");
+	background-image: url("../img/space.jpg");
 	background-repeat:no-repeat;
 	background-size: 100%;
 	background-position: center;
@@ -24,7 +24,7 @@ body {
 	z-index: -1;
 	height: 130%;
 	width: 100%;
-	background-image: url("../png/pizza1.png");
+	background-image: url("../img/pizza1.png");
 	background-repeat:no-repeat;
 	background-size: 30%;
 	position: fixed;
