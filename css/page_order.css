@@ -1,6 +1,7 @@
 // https://www.w3schools.com/css/css_form.asp
 * {
   box-sizing: border-box;
+  color: #eeeeee;
 }
 
 input[type=text], select, textarea {
@@ -14,6 +15,7 @@ input[type=text], select, textarea {
 label {
   padding: 12px 12px 12px 0;
   display: inline-block;
+  color: #c8bf9c;
 }
 
 input[type=submit] {
