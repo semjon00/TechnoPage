@@ -18,17 +18,4 @@ Kasutaisin seda:
 <br>alien4.png - https://www.alien-covenant.com/news/new-alien-game-explore-areas-the-universe-fans-havent-gotten-experience
 <br><br>
 
-Palun muutke LTAT.03.002 hindamisreegled ja võtke neid masendavaid lävendeid maha. Ma olen ok, 
-<span style="font-size:80%">ma olen ok, </span>
-<span style="font-size:64%">ma olen ok, </span>
-<span style="font-size:51%">ma olen ok, </span>
-<span style="font-size:41%">ma olen ok, </span>
-<span style="font-size:33%">ma olen ok, </span>
-<span style="font-size:26%">ma olen ok, </span>
-<span style="font-size:21%">ma olen ok, </span>
-<span style="font-size:17%">ma olen ok, </span>
-<span style="font-size:13%">ma olen ok, </span>
-<span style="font-size:08%">ma olen ok, </span>
-<span style="font-size:06%">ma olen ok, </span>
-<span style="font-size:04%">ma olen ok, </span>
-<span style="font-size:02%">ma olen ok, </span>
+Palun muutke LTAT.03.002 hindamisreegled ja võtke neid masendavaid lävendeid maha.
