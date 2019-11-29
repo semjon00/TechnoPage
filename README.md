@@ -1,10 +1,13 @@
 # TechnoPage
 
-Minu pizza pood! Kõige maitsvam pizza maailmas!
-Palun muutke LTAT.03.002 hindamisreegled.
+Minu pitsa pood! Kõige maitsvam pizza maailmas! Kas maailmas on üldse midagi toredamat, kui hea pitsa? Ilmselt mitte! See pärast ma kutsun teid proovida maailma kõige parimat pitsat! Mul isegi on veebileht! Ja see on Github-is kõigile kättesaadav!<br><br>
 
-Attribution:
-<br>pizza0.png - https://www.cicis.com/wp-content/uploads/2019/04/pizza_categoryheader.png
+Kahjuks veebilehega keegi mind ei aidanud ;(<br>
+Aga pitsa jaoks ma olen ükskõik milleks valmis. Proovige veebilehtesid kitsaks teha ja planeeti klikkida. Nautide navigeerimismenüüt ja planeeti pöörlemist. (Oi, seda oli raske teha!) Samuti lugege kindlasti tagasisidet! See on päris tagasiside mõistlikest olenditest, mitte minu poolt pandud reklaam!<br><br>
+
+Tänu pitsale, nüüd oskan hästi css-i (isegi <i>responsive design</i>-i) ja js-i kasutada vabalt.<br><br>
+
+Kasutaisin seda:
 <br>pizza1.png - https://www.mafiafood.ru/upload/iblock/6df/6dfdde5f00d02de35e996ae6bd70a668.png
 <br>logo.png - https://image.shutterstock.com/image-vector/pizza-cafe-logo-icon-emblem-260nw-1041333244.jpg
 <br>background.jpg - https://klv-oboi.ru/img/gallery/32/thumbs/thumb_l_15506.jpg
@@ -13,3 +16,19 @@ Attribution:
 <br>alien2.png - https://www.seti.org/sites/default/files/styles/original/public/2019-09/Zork%20alien%20head%20PPR.jpg?itok=T7eTYzCZ
 <br>alien3.png - https://euw.leagueoflegends.com/en/featured/champion-reveal-ornn
 <br>alien4.png - https://www.alien-covenant.com/news/new-alien-game-explore-areas-the-universe-fans-havent-gotten-experience
+<br><br>
+
+Palun muutke LTAT.03.002 hindamisreegled ja võtke neid masendavaid lävendeid maha. Ma olen ok, 
+<span style="font-size:80%">ma olen ok, </span>
+<span style="font-size:64%">ma olen ok, </span>
+<span style="font-size:51%">ma olen ok, </span>
+<span style="font-size:41%">ma olen ok, </span>
+<span style="font-size:33%">ma olen ok, </span>
+<span style="font-size:26%">ma olen ok, </span>
+<span style="font-size:21%">ma olen ok, </span>
+<span style="font-size:17%">ma olen ok, </span>
+<span style="font-size:13%">ma olen ok, </span>
+<span style="font-size:08%">ma olen ok, </span>
+<span style="font-size:06%">ma olen ok, </span>
+<span style="font-size:04%">ma olen ok, </span>
+<span style="font-size:02%">ma olen ok, </span>

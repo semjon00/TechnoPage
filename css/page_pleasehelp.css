@@ -1,0 +1,13 @@
+body {
+	background-color: black;
+}
+
+h1 {
+    position: absolute;
+    top:  50%;
+    left: 50%;
+    transform: translate(-50%,-100%);
+	
+	font-size: 80px;
+	z-index: 1;
+}
