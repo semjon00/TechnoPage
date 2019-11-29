@@ -1,6 +1,7 @@
 #PizzaPlanet {
 	z-index: 5;
     display: block;
+	border: 0;
 }
 
 .feedbackbox {
