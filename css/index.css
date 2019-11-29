@@ -1,7 +1,14 @@
 #PizzaPlanet {
-	z-index: 5;
+	z-index: -1;
     display: block;
 	border: 0;
+}
+
+@media screen and (max-width: 700px) {
+  iframe {
+    position: absolute;
+	right: 0;
+  }
 }
 
 .feedbackbox {
