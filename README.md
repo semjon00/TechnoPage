@@ -3,7 +3,7 @@
 Minu pitsa pood! Kõige maitsvam pizza maailmas! Kas maailmas on üldse midagi toredamat, kui hea pitsa? Ilmselt mitte! See pärast ma kutsun teid proovida maailma kõige parimat pitsat! Mul isegi on veebileht! Ja see on Github-is kõigile kättesaadav!<br><br>
 
 Kahjuks veebilehega keegi mind ei aidanud ;(<br>
-Aga pitsa jaoks ma olen ükskõik milleks valmis. Proovige veebilehtesid kitsaks teha ja planeeti klikkida. Nautide navigeerimismenüüt ja planeeti pöörlemist. (Oi, seda oli raske teha!) Samuti lugege kindlasti tagasisidet! See on päris tagasiside mõistlikest olenditest, mitte minu poolt pandud reklaam!<br><br>
+Aga pitsa jaoks ma olen ükskõik milleks valmis. Proovige veebilehtesid kitsaks teha ja planeeti klikkida. Nautide navigeerimismenüüt ja planeeti pöörlemist. (Oi kui raske neid oli teha!) Samuti lugege kindlasti tagasisidet! See on päris tagasiside mõistlikest olenditest, mitte minu poolt pandud reklaam!<br><br>
 
 Tänu pitsale, nüüd oskan hästi css-i (isegi <i>responsive design</i>-i) ja js-i kasutada vabalt.<br><br>
 
