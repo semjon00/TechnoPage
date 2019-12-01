@@ -16,6 +16,4 @@ Kasutaisin seda:
 <br>alien2.png - https://www.seti.org/sites/default/files/styles/original/public/2019-09/Zork%20alien%20head%20PPR.jpg?itok=T7eTYzCZ
 <br>alien3.png - https://euw.leagueoflegends.com/en/featured/champion-reveal-ornn
 <br>alien4.png - https://www.alien-covenant.com/news/new-alien-game-explore-areas-the-universe-fans-havent-gotten-experience
-<br><br>
-
-Palun muutke LTAT.03.002 hindamisreegled ja võtke neid masendavaid lävendeid maha.
+<br>
